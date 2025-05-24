@@ -17,8 +17,7 @@ while True:
         print("Failed to read frame")
         break
     
-    frame = cv2.cvtColor(cropped_frame, cv2.COLOR_BGRA2BGR)
-    hsv_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+    hsv_frame = cv2.cvtColor(cropped_frame, cv2.COLOR_BGR2HSV)
     mask = get_green_mask(hsv_frame)
 
     contours, hierarchy = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
