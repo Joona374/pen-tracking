@@ -36,7 +36,6 @@ while True:
                 else:
                     drawing_points.append([drawing_points[-1][1], (center_x, center_y), current_drawing_color])
 
-    trail_canvas = np.zeros((cropped_frame.shape[0], cropped_frame.shape[1], 3), dtype=np.uint8)
     for i in range(len(drawing_points)):
         start_point = drawing_points[i][0]
         end_point = drawing_points[i][1]
