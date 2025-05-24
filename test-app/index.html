@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Dot</title>
+    <style>
+      html {
+        height: 100vh;
+      }
+
+      body {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+
+      canvas {
+        flex: 1;
+        cursor: none;
+      }
+
+      .buttons {
+        display: flex;
+        height: 10%;
+        align-items: center;
+        justify-content: space-between;
+        background-color: aliceblue;
+        padding: 17px;
+      }
+
+      .button {
+        border: solid 1px black;
+        padding: 8px;
+        width: 10%;
+        text-align: center;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+      }
+
+      .button:hover {
+        border: 2px solid black;
+        transform: scale(1.1);
+      }
+
+      #button-red {
+        background-color: red;
+        color: white;
+      }
+
+      #button-green {
+        background-color: green;
+        color: white;
+      }
+
+      #button-blue {
+        background-color: blue;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <div class="buttons">
+      <div id="button-red" class="button">RED</div>
+      <div id="button-green" class="button">GREEN</div>
+      <div id="button-blue" class="button">BLUE</div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
